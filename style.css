@@ -1,0 +1,160 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
+body{
+    margin: 0px;
+		box-sizing: border-box;
+    height: 100vh;
+    background-image: url("assets/stars.jpeg");
+    font-family: 'Star Wars', sans-serif;
+
+}
+header{
+    margin: 0px;
+}
+
+
+#logo{
+    height: 10em;
+    display: block;
+    margin: 0 auto;
+    margin-top:20px;
+}
+
+header h1{
+    color: yellow;
+    font-size: 5em;
+    font-weight: 100;
+    text-align: center;
+    margin: 0px;
+    padding: 1px;
+}
+
+#question-count{
+    color: yellow;
+    text-align: center;
+    font-size:1.5em;
+    margin: 10px;
+}
+
+#question-container{
+    height: 30em;
+    width: 70vw;
+    margin: 0 auto;
+    border: 5px solid #f3e21a;
+    border-radius: 50px;
+    background-color: #313131;
+    position:relative;
+}
+
+#question{
+    color:yellow;
+    text-align:center;
+    margin: 40px;
+}
+
+#input{
+    display: block;
+    height: 1em;
+    width: 70%;
+    margin: 0 auto;
+    background-color: black;
+    padding: 15px;
+    font-size: 2em;
+    text-align: center;
+    color: yellow;
+    border-radius: 10px;
+}
+
+#choices{
+    display:flex;
+    justify-content: space-around;
+    
+}
+
+#choice1, #choice2, #choice3, #next-button{
+    font-size: 1.3em;
+    width: 10em;
+    color:yellow;
+    background-color: black;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#next-button{
+    width: 5em;
+    font-size: 1em;
+}
+#output{
+    height: 1em;
+    width: 50%;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1em;
+		
+}
+
+.wrong-display{
+    background-color: red;
+    animation-name: wrong;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite ;
+		
+}
+.correct-display{
+    background-color: green;
+    animation-name: correct;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite ;
+}
+
+#footer{
+    position:relative;
+    bottom: 0px;
+    display:flex;
+    align-items: baseline;
+    justify-content: space-around;
+    font-size: 1.3em;
+    color:yellow
+}
+
+
+
+
+@keyframes wrong {
+	0% {
+		background-color: red;
+        opacity: 0.3;
+	}
+    50%{
+        background-color: red;
+        opacity: 1;
+    }
+	
+	
+	100%{
+		background-color:red;
+        opacity:0.3;
+	}
+}
+
+@keyframes correct {
+	0% {
+		background-color: green;
+        opacity: 0.3;
+	}
+    50%{
+        background-color: green;
+        opacity: 1;
+    }
+	
+	
+	100%{
+		background-color:green;
+        opacity:0.3;
+	}
+}
