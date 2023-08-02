@@ -191,4 +191,20 @@ choice3.addEventListener('click', (e) => {
 })
 
 
+next.addEventListener('click', (e) =>{
+    output.className = ""
+    if(questions[count].answered){
+        count++
+    }
+    setQuestion(questions[count])
+    output.innerText = ""
+    questionCount.innerText = `Question ${count+1} of ${questions.length}`
+})
+   
+
+   
+
 }
+
+
+
