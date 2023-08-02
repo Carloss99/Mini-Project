@@ -131,4 +131,64 @@ choice3.innerText = choices[2]
 }
 
 }
+
+choice1.addEventListener('click', (e) => {
+    if(!questions[count].answered){
+        if(values[0]){
+            correct++
+            output.innerText = "Correct!"
+            output.className ="correct-display"
+            correctOut.innerText = `Correct: ${correct}`
+            questions[count].answered = true
+        }
+        else{
+            wrong++
+            questions[count].answer()
+            output.className = "wrong-display"
+            wrongOut.innerText = `Wrong: ${wrong}`
+            questions[count].answered = true
+        }
+        
+    }
+})
+
+choice2.addEventListener('click', (e) => {
+   if(!questions[count].answered){
+        if(values[1]){
+            correct++
+            output.innerText = "Correct!"
+            output.className ="correct-display"
+            correctOut.innerText = `Correct: ${correct}`
+            questions[count].answered = true
+        }
+        else{
+            wrong++
+            questions[count].answer()
+            output.className = "wrong-display"
+            wrongOut.innerText = `Wrong: ${wrong}`
+            questions[count].answered = true
+        }
+    }
+}
+)
+
+choice3.addEventListener('click', (e) => {
+    if(!questions[count].answered)
+        if(values[2]){
+            correct++
+            output.innerText = "Correct!"
+            output.className ="correct-display"
+            correctOut.innerText = `Correct: ${correct}`
+            questions[count].answered = true
+        }
+        else{
+            wrong++
+            questions[count].answer()
+            output.className = "wrong-display"
+            wrongOut.innerText = `Wrong: ${wrong}`
+            questions[count].answered = true
+        }
+})
+
+
 }
