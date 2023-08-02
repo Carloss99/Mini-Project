@@ -103,4 +103,32 @@ const questions = [{
 },]
 
    
+
+const setQuestion = (q) => {
+if(count >= 5){
+    alert("all done")
+    questions.forEach((q) =>{q.answered = false})
+    count = 0
+    wrong = 0
+    wrongOut.innerText = `Wrong: ${wrong}`
+    correct = 0
+    correctOut.innerText = `Correct: ${correct}`
+    setQuestion(questions[count])
+    output.innerText = ""
+    questionCount.innerText = `Question ${count+1} of ${questions.length}`
+
+}else{
+
+//grabs choices and values from question
+choices = Object.keys(q.choices)
+values = Object.values(q.choices)
+
+//outputs the question and choices to the DOM
+question.innerText = q.question
+choice1.innerText = choices[0]
+choice2.innerText = choices[1]
+choice3.innerText = choices[2]
+}
+
+}
 }
