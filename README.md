@@ -1,3 +1,4 @@
 # Project-1
 Project #1
 Star Wars Trivia is a simple app where it asks the user 5 questions (for now) about star wars films. The user is able to pick from 3 multiple choices, click a button to give the next question and can see which question number they are currently on. When the user picks and answer, the app will either output "correct" if they are correct or it will fetch the data and output to the user the correct answer while also keeping track of how many are correct and wrong. My first approach was to create an array of objects where each object holds the question as a string, and array of choices with the correct one set to true and the incorrect ones are false, and a function that outputs the answer. Once the user finishes answering all questions, the app will start over again with the first question and the score will reset. 
+link to app: https://64cac85a3f3b7c05ed681922--regal-tanuki-9c1a67.netlify.app 
